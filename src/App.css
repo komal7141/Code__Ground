@@ -145,9 +145,31 @@ footer a{
   margin-top: 20px;
 }
 
-.CodeMirror{
-  min-height:calc(100vh - 6000px);
+.CodeMirror {
+  height: 60vh; /* 60% of the visible screen height */
   font-size: 15px;
   line-height: 1.6;
   padding-top: 20px;
+}
+
+.editorwrap {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.run-btn {
+  background-color: #00c853;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.run-btn:hover {
+  background-color: #00b342;
 }
