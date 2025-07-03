@@ -36,8 +36,6 @@ app.post('/run', async (req, res) => {
       versionIndex,
     });
 
-    console.log('Using clientId:', clientId);
-    console.log('Using clientSecret:', clientSecret);
 
     res.json(data);
   } catch (error) {
@@ -64,7 +62,7 @@ io.on('connection', (socket) => {
   console.log('Socket connected:', socket.id);
 
   socket.on(ACTIONS.JOIN, ({ roomId, username, userId }) => {
-    // ✅ Allow multiple same userId connections
+   
     userSocketMap[socket.id] = { username, userId };
     socket.join(roomId);
 

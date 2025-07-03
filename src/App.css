@@ -109,6 +109,8 @@ footer a{
 
 .asideInner{
   flex:1;
+  overflow-y: auto;
+  flex-grow: 1;
 }
 
 
@@ -157,6 +159,7 @@ footer a{
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 
@@ -173,3 +176,6 @@ footer a{
 .run-btn:hover {
   background-color: #00b342;
 }
+
+
+
