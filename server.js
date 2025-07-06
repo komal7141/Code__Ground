@@ -5,6 +5,8 @@ const { Server } = require('socket.io');
 const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
+const path = require('path');
+
 
 const clientId = process.env.REACT_APP_CLIENT_ID;
 const clientSecret = process.env.REACT_APP_CLIENT_SECRET;
@@ -111,6 +113,13 @@ uniqueClients.forEach(({ socketId }) => {
 
     delete userSocketMap[socket.id];
   });
+});
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // Start server
