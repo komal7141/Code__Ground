@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@uiw/codemirror-theme-dracula": "^4.23.14",
     "@uiw/react-codemirror": "^4.23.14",
+    "ajv-keywords": "^3.5.2",
     "axios": "^1.10.0",
     "codemirror": "^5.65.18",
     "cors": "^2.8.5",
